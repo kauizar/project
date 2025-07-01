@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Instagram, MessageCircle, User, Package, Calendar, CheckCircle, X, Plus, AlertTriangle, Wrench, Hammer, Drill, Menu, Eye, Trash2, Users } from 'lucide-react';
+import { Phone, MapPin, Instagram, MessageCircle, User, Package, Calendar, CheckCircle, X, Plus, AlertTriangle, Wrench, Hammer, Drill, Menu, Eye, Trash2, Users, Screwdriver, Zap, Settings, Cog, Spanner } from 'lucide-react';
 
 type Vendor = 'Felipe' | 'João' | 'Kauan' | 'Rodrigo' | 'Guilherme';
 
@@ -86,12 +86,12 @@ function App() {
   const [newMissingItem, setNewMissingItem] = useState('');
 
   const brandLogos = [
-    { name: 'Condor', logo: 'condorr.png', class: 'max-h-8 w-auto' },
-    { name: 'Quartzolit', logo: '/new-logo-quartzolit_0.png', class: 'max-h-8 w-auto' },
-    { name: 'Cauê', logo: '/site-caue-1668607058.jpg', class: 'max-h-10 w-auto' },
-    { name: 'Suvinil', logo: '/logotipo-suvinil-fundo-laranja.png', class: 'max-h-8 w-auto' },
-    { name: 'Lorenzetti', logo: '/lorenzetti copy.png', class: 'max-h-6 w-auto' }, 
-    { name: 'Hydronorth', logo: '/hydronorth-logo.png', class: 'max-h-8 w-auto' } 
+    { name: 'Condor', logo: 'condorr.png', class: 'max-h-12 w-auto' },
+    { name: 'Quartzolit', logo: '/new-logo-quartzolit_0.png', class: 'max-h-12 w-auto' },
+    { name: 'Cauê', logo: '/site-caue-1668607058.jpg', class: 'max-h-14 w-auto' },
+    { name: 'Suvinil', logo: '/logotipo-suvinil-fundo-laranja.png', class: 'max-h-12 w-auto' },
+    { name: 'Lorenzetti', logo: '/lorenzetti copy.png', class: 'max-h-10 w-auto' }, 
+    { name: 'Hydronorth', logo: '/hydronorth-logo.png', class: 'max-h-12 w-auto' } 
   ];
 
   const vendors: Vendor[] = ['Felipe', 'João', 'Kauan', 'Rodrigo', 'Guilherme'];
@@ -172,110 +172,127 @@ function App() {
 
   if (currentPage === 'home') {
     return (
-      <div className="h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 relative overflow-hidden">
-        {/* Floating Tools Background */}
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 relative overflow-hidden">
+        {/* Enhanced Floating Tools Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <Wrench className="absolute top-20 left-16 text-orange-400 opacity-20 transform rotate-45 animate-pulse" size={32} />
-          <Hammer className="absolute top-32 right-24 text-orange-500 opacity-25 transform -rotate-12 animate-bounce" size={28} />
-          <Drill className="absolute top-64 left-1/4 text-orange-400 opacity-20 transform rotate-12" size={36} />
-          <Wrench className="absolute bottom-32 right-16 text-orange-500 opacity-25 transform -rotate-45 animate-pulse" size={30} />
-          <Hammer className="absolute top-1/2 left-1/3 text-orange-400 opacity-15 transform rotate-90" size={24} />
-          <Drill className="absolute top-40 right-1/3 text-orange-500 opacity-30 transform -rotate-30 animate-bounce" size={38} />
-          <Wrench className="absolute top-1/3 left-1/2 text-orange-400 opacity-20 transform rotate-180" size={28} />
-          <Hammer className="absolute bottom-1/3 right-1/4 text-orange-500 opacity-25 transform rotate-45 animate-pulse" size={26} />
-          <Drill className="absolute bottom-48 left-20 text-orange-400 opacity-15 transform rotate-75" size={34} />
-          <Wrench className="absolute bottom-64 right-32 text-orange-500 opacity-20 transform -rotate-30 animate-bounce" size={32} />
-          <Hammer className="absolute top-80 left-2/3 text-orange-400 opacity-25 transform rotate-135" size={22} />
-          <Drill className="absolute bottom-20 left-1/2 text-orange-500 opacity-15 transform -rotate-60" size={32} />
+          {/* Top Section Tools */}
+          <Wrench className="absolute top-16 left-12 text-orange-400 opacity-25 transform rotate-45 animate-pulse" size={40} />
+          <Hammer className="absolute top-24 right-20 text-orange-500 opacity-30 transform -rotate-12 animate-bounce" size={36} />
+          <Drill className="absolute top-32 left-1/4 text-orange-400 opacity-25 transform rotate-12" size={44} />
+          <Screwdriver className="absolute top-20 right-1/3 text-orange-500 opacity-20 transform rotate-30 animate-pulse" size={38} />
+          <Spanner className="absolute top-40 left-1/3 text-orange-400 opacity-25 transform -rotate-45" size={42} />
+          
+          {/* Middle Section Tools */}
+          <Wrench className="absolute top-1/2 left-16 text-orange-500 opacity-20 transform rotate-90 animate-bounce" size={36} />
+          <Hammer className="absolute top-1/2 right-24 text-orange-400 opacity-25 transform rotate-135" size={40} />
+          <Drill className="absolute top-60 left-1/2 text-orange-500 opacity-30 transform -rotate-30 animate-pulse" size={48} />
+          <Settings className="absolute top-1/3 right-1/4 text-orange-400 opacity-20 transform rotate-45" size={34} />
+          <Cog className="absolute top-2/3 left-1/4 text-orange-500 opacity-25 transform -rotate-60 animate-bounce" size={38} />
+          <Zap className="absolute top-1/2 left-2/3 text-orange-400 opacity-20 transform rotate-15" size={32} />
+          
+          {/* Bottom Section Tools */}
+          <Wrench className="absolute bottom-32 right-16 text-orange-500 opacity-25 transform -rotate-45 animate-pulse" size={44} />
+          <Hammer className="absolute bottom-40 left-20 text-orange-400 opacity-20 transform rotate-75" size={38} />
+          <Drill className="absolute bottom-24 right-1/3 text-orange-500 opacity-30 transform rotate-60 animate-bounce" size={42} />
+          <Screwdriver className="absolute bottom-48 left-1/3 text-orange-400 opacity-25 transform -rotate-30" size={36} />
+          <Spanner className="absolute bottom-36 right-1/4 text-orange-500 opacity-20 transform rotate-120 animate-pulse" size={40} />
+          <Settings className="absolute bottom-20 left-1/2 text-orange-400 opacity-25 transform -rotate-45" size={34} />
+          <Cog className="absolute bottom-56 right-12 text-orange-500 opacity-20 transform rotate-90 animate-bounce" size={36} />
+          
+          {/* Additional scattered tools */}
+          <Wrench className="absolute top-80 left-3/4 text-orange-400 opacity-15 transform rotate-180" size={32} />
+          <Hammer className="absolute bottom-64 left-1/4 text-orange-500 opacity-20 transform -rotate-90" size={34} />
+          <Drill className="absolute top-96 right-1/2 text-orange-400 opacity-25 transform rotate-45 animate-pulse" size={38} />
+          <Zap className="absolute bottom-80 right-1/3 text-orange-500 opacity-15 transform -rotate-15" size={30} />
         </div>
 
         {/* Menu Button */}
         <div className="absolute top-4 right-4 z-50">
           <button
             onClick={() => setShowMenu(!showMenu)}
-            className="bg-white/10 backdrop-blur-md border border-white/20 text-white p-2 rounded-lg hover:bg-white/20 transition-all duration-300 shadow-lg"
+            className="bg-white/10 backdrop-blur-md border border-white/20 text-white p-3 rounded-xl hover:bg-white/20 transition-all duration-300 shadow-lg"
           >
-            <Menu size={20} />
+            <Menu size={24} />
           </button>
           
           {/* Dropdown Menu */}
           {showMenu && (
-            <div className="absolute top-12 right-0 bg-white rounded-lg shadow-2xl border border-gray-200 min-w-40 overflow-hidden">
+            <div className="absolute top-16 right-0 bg-white rounded-xl shadow-2xl border border-gray-200 min-w-48 overflow-hidden">
               <button
                 onClick={() => {
                   setCurrentPage('vendor-login');
                   setShowMenu(false);
                 }}
-                className="w-full px-4 py-3 text-left hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-2 border-b border-gray-100"
+                className="w-full px-6 py-4 text-left hover:bg-blue-50 transition-colors duration-200 flex items-center space-x-3"
               >
-                <User size={16} className="text-blue-600" />
-                <span className="font-medium text-gray-800 text-sm">Área do Vendedor</span>
+                <User size={20} className="text-blue-600" />
+                <span className="font-medium text-gray-800">Área do Vendedor</span>
               </button>
             </div>
           )}
         </div>
 
         {/* Header */}
-        <header className="relative z-10 text-white text-center py-8">
-          <h1 className="text-5xl font-bold mb-2 tracking-tight text-white drop-shadow-2xl">Casa Mais</h1>
-          <p className="text-2xl text-blue-100 drop-shadow-lg">Material de Construção</p>
+        <header className="relative z-10 text-white text-center py-12">
+          <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight text-white drop-shadow-2xl">Casa Mais</h1>
+          <p className="text-2xl md:text-3xl text-blue-100 drop-shadow-lg">Material de Construção</p>
         </header>
 
         {/* Main Content */}
-        <main className="container mx-auto px-4 relative z-10 h-[calc(100vh-200px)]">
+        <main className="container mx-auto px-4 md:px-6 pb-8 relative z-10">
           {/* Contact Info and Partner Brands */}
-          <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-white/20 h-full">
-            <div className="grid md:grid-cols-2 gap-6 h-full">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 border border-white/20">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
               {/* Contact Information Column */}
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Informações de Contato</h2>
+              <div className="space-y-6 md:space-y-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">Informações de Contato</h2>
                 
-                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl border border-blue-200 shadow-sm">
-                  <MapPin className="text-blue-600" size={20} />
+                <div className="flex items-center space-x-4 md:space-x-5 p-5 md:p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl border border-blue-200 shadow-sm">
+                  <MapPin className="text-blue-600 flex-shrink-0" size={32} />
                   <div>
-                    <p className="font-bold text-gray-800">Endereço</p>
-                    <p className="text-gray-700 text-sm">Av Nossa Senhora de Fátima, 554</p>
-                    <p className="text-gray-700 text-sm">Agenor de Campos, Mongaguá - SP</p>
+                    <p className="font-bold text-gray-800 text-lg md:text-xl">Endereço</p>
+                    <p className="text-gray-700 text-base md:text-lg">Av Nossa Senhora de Fátima, 554</p>
+                    <p className="text-gray-700 text-base md:text-lg">Agenor de Campos, Mongaguá - SP</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl border border-orange-200 shadow-sm">
-                  <Phone className="text-orange-600" size={20} />
+                <div className="flex items-center space-x-4 md:space-x-5 p-5 md:p-6 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl border border-orange-200 shadow-sm">
+                  <Phone className="text-orange-600 flex-shrink-0" size={32} />
                   <div>
-                    <p className="font-bold text-gray-800">Telefone</p>
-                    <p className="text-gray-700">(13) 3303-4707</p>
+                    <p className="font-bold text-gray-800 text-lg md:text-xl">Telefone</p>
+                    <p className="text-gray-700 text-lg md:text-xl">(13) 3303-4707</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl border border-pink-200 shadow-sm">
-                  <Instagram className="text-pink-600" size={20} />
+                <div className="flex items-center space-x-4 md:space-x-5 p-5 md:p-6 bg-gradient-to-r from-pink-50 to-pink-100 rounded-2xl border border-pink-200 shadow-sm">
+                  <Instagram className="text-pink-600 flex-shrink-0" size={32} />
                   <div>
-                    <p className="font-bold text-gray-800">Instagram</p>
-                    <p className="text-gray-700">@casamaismongagua</p>
+                    <p className="font-bold text-gray-800 text-lg md:text-xl">Instagram</p>
+                    <p className="text-gray-700 text-lg md:text-xl">@casamaismongagua</p>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-2xl border-2 border-green-300 shadow-lg">
-                  <p className="text-xl font-bold text-green-800 mb-2">Conheça nossos produtos!</p>
-                  <p className="text-lg font-semibold text-green-700 mb-3">Chame no nosso WhatsApp!</p>
+                <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 md:p-8 rounded-3xl border-2 border-green-300 shadow-lg">
+                  <p className="text-2xl md:text-3xl font-bold text-green-800 mb-3">Conheça nossos produtos!</p>
+                  <p className="text-xl md:text-2xl font-semibold text-green-700 mb-6">Chame no nosso WhatsApp!</p>
                   
                   <button 
                     onClick={openWhatsApp}
-                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-bold flex items-center space-x-2 transform hover:scale-105 transition-all duration-300 shadow-xl"
+                    className="w-full md:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg md:text-xl flex items-center justify-center space-x-3 md:space-x-4 transform hover:scale-105 transition-all duration-300 shadow-xl"
                   >
-                    <MessageCircle size={20} />
+                    <MessageCircle size={28} />
                     <span>WhatsApp</span>
                   </button>
                 </div>
               </div>
 
               {/* Partner Brands Column */}
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Empresas Parceiras</h2>
+              <div className="space-y-6 md:space-y-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">Empresas Parceiras</h2>
                 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-4 md:gap-6">
                   {brandLogos.map((brand, index) => (
-                    <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-3 text-center hover:from-gray-100 hover:to-gray-200 transition-all duration-300 flex items-center justify-center h-16 shadow-md border border-gray-200">
+                    <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 md:p-6 text-center hover:from-gray-100 hover:to-gray-200 transition-all duration-300 flex items-center justify-center h-20 md:h-24 shadow-md border border-gray-200">
                       {brand.logo ? (
                         <img 
                           src={brand.logo} 
@@ -290,12 +307,12 @@ function App() {
                 </div>
 
                 {/* Quem somos nós button */}
-                <div className="mt-4">
+                <div className="mt-6 md:mt-8">
                   <button
                     onClick={() => setCurrentPage('about-us')}
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white p-4 rounded-xl font-bold transition-all duration-300 shadow-lg flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white p-5 md:p-6 rounded-2xl font-bold text-lg md:text-xl transition-all duration-300 shadow-lg flex items-center justify-center space-x-3"
                   >
-                    <Users size={20} />
+                    <Users size={24} />
                     <span>Quem somos nós?</span>
                   </button>
                 </div>
