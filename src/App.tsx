@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Instagram, MessageCircle, User, Package, Calendar, CheckCircle, X, Plus, AlertTriangle, Wrench, Hammer, Drill, Menu, Eye, Trash2, Users, Screwdriver, Zap, Settings, Cog, Spanner } from 'lucide-react';
+import { Phone, MapPin, Instagram, MessageCircle, User, Package, Calendar, CheckCircle, X, Plus, AlertTriangle, Wrench, Hammer, Drill, Menu, Eye, Trash2, Users, HardDrive as Screwdriver, Zap, Settings, Cog, Plane as Spanner } from 'lucide-react';
 
 type Vendor = 'Felipe' | 'João' | 'Kauan' | 'Rodrigo' | 'Guilherme';
 
