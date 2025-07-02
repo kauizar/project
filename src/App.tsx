@@ -233,9 +233,20 @@ function App() {
         </div>
 
         {/* Header */}
-        <header className="relative z-10 text-white text-center py-12">
-          <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight text-white drop-shadow-2xl">Casa Mais</h1>
-          <p className="text-2xl md:text-3xl text-blue-100 drop-shadow-lg">Material de Construção</p>
+        <header className="relative z-10 text-white text-center py-8 md:py-12">
+          <h1 className="text-5xl md:text-7xl font-bold mb-3 md:mb-4 tracking-tight text-white drop-shadow-2xl">Casa Mais</h1>
+          <p className="text-xl md:text-3xl text-blue-100 drop-shadow-lg mb-6 md:mb-0">Material de Construção</p>
+          
+          {/* Quem somos nós button - Only on mobile */}
+          <div className="md:hidden mt-8">
+            <button
+              onClick={() => setCurrentPage('about-us')}
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg flex items-center justify-center space-x-3 mx-auto"
+            >
+              <Users size={24} />
+              <span>Quem somos nós?</span>
+            </button>
+          </div>
         </header>
 
         {/* Main Content */}
@@ -244,10 +255,10 @@ function App() {
           <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 border border-white/20">
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
               {/* Contact Information Column */}
-              <div className="space-y-6 md:space-y-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">Informações de Contato</h2>
+              <div className="space-y-8 md:space-y-8">
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">Informações de Contato</h2>
                 
-                <div className="flex items-center space-x-4 md:space-x-5 p-5 md:p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl border border-blue-200 shadow-sm">
+                <div className="flex items-center space-x-4 md:space-x-5 p-6 md:p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl border border-blue-200 shadow-sm">
                   <MapPin className="text-blue-600 flex-shrink-0" size={32} />
                   <div>
                     <p className="font-bold text-gray-800 text-lg md:text-xl">Endereço</p>
@@ -256,7 +267,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 md:space-x-5 p-5 md:p-6 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl border border-orange-200 shadow-sm">
+                <div className="flex items-center space-x-4 md:space-x-5 p-6 md:p-6 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl border border-orange-200 shadow-sm">
                   <Phone className="text-orange-600 flex-shrink-0" size={32} />
                   <div>
                     <p className="font-bold text-gray-800 text-lg md:text-xl">Telefone</p>
@@ -264,7 +275,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 md:space-x-5 p-5 md:p-6 bg-gradient-to-r from-pink-50 to-pink-100 rounded-2xl border border-pink-200 shadow-sm">
+                <div className="flex items-center space-x-4 md:space-x-5 p-6 md:p-6 bg-gradient-to-r from-pink-50 to-pink-100 rounded-2xl border border-pink-200 shadow-sm">
                   <Instagram className="text-pink-600 flex-shrink-0" size={32} />
                   <div>
                     <p className="font-bold text-gray-800 text-lg md:text-xl">Instagram</p>
@@ -272,13 +283,13 @@ function App() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 md:p-8 rounded-3xl border-2 border-green-300 shadow-lg">
-                  <p className="text-2xl md:text-3xl font-bold text-green-800 mb-3">Conheça nossos produtos!</p>
-                  <p className="text-xl md:text-2xl font-semibold text-green-700 mb-6">Chame no nosso WhatsApp!</p>
+                <div className="bg-gradient-to-r from-green-50 to-green-100 p-8 md:p-8 rounded-3xl border-2 border-green-300 shadow-lg">
+                  <p className="text-xl md:text-3xl font-bold text-green-800 mb-3">Conheça nossos produtos!</p>
+                  <p className="text-lg md:text-2xl font-semibold text-green-700 mb-6">Chame no nosso WhatsApp!</p>
                   
                   <button 
                     onClick={openWhatsApp}
-                    className="w-full md:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg md:text-xl flex items-center justify-center space-x-3 md:space-x-4 transform hover:scale-105 transition-all duration-300 shadow-xl"
+                    className="w-full md:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 md:px-10 py-5 md:py-5 rounded-2xl font-bold text-lg md:text-xl flex items-center justify-center space-x-3 md:space-x-4 transform hover:scale-105 transition-all duration-300 shadow-xl"
                   >
                     <MessageCircle size={28} />
                     <span>WhatsApp</span>
@@ -287,12 +298,12 @@ function App() {
               </div>
 
               {/* Partner Brands Column */}
-              <div className="space-y-6 md:space-y-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">Empresas Parceiras</h2>
+              <div className="space-y-8 md:space-y-8">
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">Empresas Parceiras</h2>
                 
-                <div className="grid grid-cols-2 gap-4 md:gap-6">
+                <div className="grid grid-cols-2 gap-6 md:gap-6">
                   {brandLogos.map((brand, index) => (
-                    <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 md:p-6 text-center hover:from-gray-100 hover:to-gray-200 transition-all duration-300 flex items-center justify-center h-20 md:h-24 shadow-md border border-gray-200">
+                    <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 md:p-6 text-center hover:from-gray-100 hover:to-gray-200 transition-all duration-300 flex items-center justify-center h-24 md:h-24 shadow-md border border-gray-200">
                       {brand.logo ? (
                         <img 
                           src={brand.logo} 
@@ -306,8 +317,8 @@ function App() {
                   ))}
                 </div>
 
-                {/* Quem somos nós button */}
-                <div className="mt-6 md:mt-8">
+                {/* Quem somos nós button - Only on desktop */}
+                <div className="hidden md:block mt-8">
                   <button
                     onClick={() => setCurrentPage('about-us')}
                     className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white p-5 md:p-6 rounded-2xl font-bold text-lg md:text-xl transition-all duration-300 shadow-lg flex items-center justify-center space-x-3"
@@ -326,33 +337,43 @@ function App() {
 
   if (currentPage === 'about-us') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 p-4 md:p-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-white rounded-3xl shadow-2xl p-10">
-            <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">Quem somos nós?</h2>
+          <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8 text-center">Quem somos nós?</h2>
             
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
+              {/* Rodrigo Photo Section - First on mobile */}
+              <div className="md:order-last bg-gradient-to-br from-gray-50 to-gray-100 p-6 md:p-8 rounded-3xl border border-gray-200 text-center">
+                <div className="w-32 h-32 md:w-48 md:h-48 mx-auto bg-gray-300 rounded-full mb-4 md:mb-6 flex items-center justify-center shadow-lg">
+                  <User size={60} className="md:hidden text-gray-600" />
+                  <User size={80} className="hidden md:block text-gray-600" />
+                </div>
+                <p className="text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">Rodrigo Ramos</p>
+                <p className="text-base md:text-lg text-gray-600 font-semibold">Co-fundador e empresário</p>
+              </div>
+
               {/* Company Information */}
               <div className="space-y-6">
-                <div className="bg-blue-50 p-6 rounded-2xl border border-blue-200">
-                  <h3 className="text-2xl font-bold text-blue-800 mb-4">Nossa História</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="bg-blue-50 p-4 md:p-6 rounded-2xl border border-blue-200">
+                  <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4">Nossa História</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                     A Casa Mais é uma empresa familiar que atua há mais de 15 anos no mercado de materiais de construção em Mongaguá. 
                     Começamos como um pequeno negócio local e hoje somos referência na região.
                   </p>
                 </div>
 
-                <div className="bg-green-50 p-6 rounded-2xl border border-green-200">
-                  <h3 className="text-2xl font-bold text-green-800 mb-4">Nossa Missão</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="bg-green-50 p-4 md:p-6 rounded-2xl border border-green-200">
+                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-3 md:mb-4">Nossa Missão</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                     Fornecer materiais de construção de alta qualidade com atendimento personalizado, 
                     ajudando nossos clientes a realizar seus sonhos de construir e reformar.
                   </p>
                 </div>
 
-                <div className="bg-orange-50 p-6 rounded-2xl border border-orange-200">
-                  <h3 className="text-2xl font-bold text-orange-800 mb-4">Nossos Valores</h3>
-                  <ul className="text-gray-700 space-y-2">
+                <div className="bg-orange-50 p-4 md:p-6 rounded-2xl border border-orange-200">
+                  <h3 className="text-xl md:text-2xl font-bold text-orange-800 mb-3 md:mb-4">Nossos Valores</h3>
+                  <ul className="text-gray-700 space-y-1 md:space-y-2 text-sm md:text-base">
                     <li>• Qualidade em primeiro lugar</li>
                     <li>• Atendimento personalizado</li>
                     <li>• Preços justos e competitivos</li>
@@ -360,28 +381,19 @@ function App() {
                   </ul>
                 </div>
 
-                <div className="bg-purple-50 p-6 rounded-2xl border border-purple-200">
-                  <h3 className="text-2xl font-bold text-purple-800 mb-4">Família Casa Mais</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="bg-purple-50 p-4 md:p-6 rounded-2xl border border-purple-200">
+                  <h3 className="text-xl md:text-2xl font-bold text-purple-800 mb-3 md:mb-4">Família Casa Mais</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                     Uma equipe dedicada e experiente, sempre pronta para atender você com carinho e profissionalismo. 
                     Nosso time de vendedores conhece cada produto e está preparado para te orientar na melhor escolha.
                   </p>
                 </div>
               </div>
-
-              {/* Rodrigo Photo Section */}
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl border border-gray-200 text-center">
-                <div className="w-48 h-48 mx-auto bg-gray-300 rounded-full mb-6 flex items-center justify-center shadow-lg">
-                  <User size={80} className="text-gray-600" />
-                </div>
-                <p className="text-xl font-bold text-gray-800 mb-2">Rodrigo Ramos</p>
-                <p className="text-lg text-gray-600 font-semibold">Co-fundador e empresário</p>
-              </div>
             </div>
 
             <button 
               onClick={() => setCurrentPage('home')}
-              className="mt-8 text-gray-500 hover:text-gray-700 font-medium text-lg"
+              className="mt-6 md:mt-8 text-gray-500 hover:text-gray-700 font-medium text-base md:text-lg"
             >
               ← Voltar ao início
             </button>
@@ -747,7 +759,7 @@ function App() {
                   <div key={delivery.id} className="bg-red-50 border border-red-200 rounded-xl p-6">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className="font-semibold text-gray-800 text-lg">{delivery.clientName}</h4>
+                        <h4 className="font-semibold text-gray-800 text:lg">{delivery.clientName}</h4>
                         <p className="text-gray-600">Produto: {delivery.product}</p>
                         <p className="text-gray-600">Data de Entrega: {new Date(delivery.deliveryDate).toLocaleDateString('pt-BR')}</p>
                         <p className="text-sm text-gray-500">Registrado em: {new Date(delivery.registrationDate).toLocaleDateString('pt-BR')}</p>
