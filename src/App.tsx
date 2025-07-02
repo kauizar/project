@@ -331,7 +331,8 @@ function App() {
           <div className="bg-white rounded-3xl shadow-2xl p-10">
             <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">Quem somos nós?</h2>
             
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-8">
+              {/* Company Information */}
               <div className="space-y-6">
                 <div className="bg-blue-50 p-6 rounded-2xl border border-blue-200">
                   <h3 className="text-2xl font-bold text-blue-800 mb-4">Nossa História</h3>
@@ -358,19 +359,23 @@ function App() {
                     <li>• Compromisso com a comunidade</li>
                   </ul>
                 </div>
-              </div>
 
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-3xl border-2 border-blue-300 shadow-lg">
-                  <div className="w-48 h-48 mx-auto bg-gray-300 rounded-full mb-6 flex items-center justify-center">
-                    <User size={80} className="text-gray-600" />
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-800 mb-4">Família Casa Mais</h4>
+                <div className="bg-purple-50 p-6 rounded-2xl border border-purple-200">
+                  <h3 className="text-2xl font-bold text-purple-800 mb-4">Família Casa Mais</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Uma equipe dedicada e experiente, sempre pronta para atender você com carinho e profissionalismo. 
                     Nosso time de vendedores conhece cada produto e está preparado para te orientar na melhor escolha.
                   </p>
                 </div>
+              </div>
+
+              {/* Rodrigo Photo Section */}
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl border border-gray-200 text-center">
+                <div className="w-48 h-48 mx-auto bg-gray-300 rounded-full mb-6 flex items-center justify-center shadow-lg">
+                  <User size={80} className="text-gray-600" />
+                </div>
+                <p className="text-xl font-bold text-gray-800 mb-2">Rodrigo Ramos</p>
+                <p className="text-lg text-gray-600 font-semibold">Co-fundador e empresário</p>
               </div>
             </div>
 
